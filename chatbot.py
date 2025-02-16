@@ -1,14 +1,12 @@
 import time
 import os
 
-# File to store messages
 FILE_NAME = "time_capsule.txt"
 
 def save_message():
     message = input("Enter your secret message: ")
     unlock_time = int(input("Enter unlock time in seconds: "))  
 
-    # Save message with timestamp
     with open(FILE_NAME, "w") as file:
         file.write(f"{time.time() + unlock_time}\n{message}")
 
